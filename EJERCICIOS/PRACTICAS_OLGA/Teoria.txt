@@ -1,0 +1,30 @@
+-Estructura habitual-
+
+<header>
+<nav> 
+<main> ---> Necesita H1 
+<section> ---> Necesita H1 
+<article> ---> Necesita H1 
+<aside> ---> Necesita H1 
+<div> ---> No suele tener H1 
+<footer> 
+
+---------------------------------------------------------------------------------------------
+
+////EJEMPLOS//// 
+
+Ejemplo 1: HEADER//MAIN 
+*******************************************************
+Ejemplo 2: HEADER//MAIN//FOOTER
+*******************************************************
+Ejemplo 3: HEADER//MAIN(section/section)//FOOTER
+*******************************************************
+Ejemplo 4: HEADER//MAIN-aside//FOOTER 
+*******************************************************
+Ejemplo 5: HEADER//aside-MAIN//FOOTER 
+*******************************************************
+Ejemplo 6: HEADER//section-MAIN-aside//FOOTER
+*******************************************************
+Ejemplo 7: HEADER(scetion/section-section/nav)//MAIN(section-section-section)//FOOTER 
+
+----------------------------------------------------------------------------------------------

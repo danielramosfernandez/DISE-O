@@ -104,20 +104,17 @@ main h1::after {
   margin: 30px auto 0;
 }
 
-/* Cards principales */
+/* Cards principales con Grid */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  justify-content: center;
   margin-top: 20px;
 }
 
 .cards .card {
   padding: 2px;
   text-align: center;
-  margin: 0px;
-  width: 33%;
 }
 
 .cards .card img {

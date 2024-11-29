@@ -1,0 +1,246 @@
+
+/* Este parte es para poner las opciones del menu
+INICIO y MUSICA a la IZQUIERDA del HEADER*/
+header{ 
+background-color: black;  
+background-image:url(/imagenes/logo.gif); 
+background-size: auto;
+background-repeat: no-repeat;
+background-position:center;
+
+height: 15%;
+    width: 99.1%;
+    position: fixed; 
+    z-index: 100;
+    border-radius: 15px;
+}
+header.chapel{ 
+    background-color: black;  
+    background-image:url(/imagenes/culto.gif); 
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position:center;
+    
+    height: 15%;
+        width: 99.1%;
+        position: fixed; 
+        z-index: 100;
+        border-radius: 15px;
+    }
+nav {  
+    display: flex;
+    justify-content: flex-end;
+    float: left;
+    padding: 10px 150px;  
+}
+nav ul{ 
+  
+    list-style: none;
+    overflow: hidden;  
+}
+nav ul li{
+   
+    float: left; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 35;
+}
+nav ul li a{ 
+    display: block; 
+    padding: 35px;
+    color:white; 
+    text-decoration: none;
+} 
+li a:hover {
+    background-color:#00c997;
+  }
+  li a.rosa:hover{
+    background-color:#EB5EB5;
+  }
+
+/* Este parte es para poner las opciones del menu
+INICIO y MUSICA a la DERCHA del HEADER*/
+  nav.der {   
+  
+    float: right;
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px 280px;
+      
+   }
+   nav.der ul{ 
+  
+       list-style: none;
+       overflow: hidden;  
+   }
+   nav.der ul li{
+
+       font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+       font-size: 35; 
+      
+   }
+    nav.der ul li a{ 
+       display: block; 
+       padding: 35px;
+       color:white; 
+       text-decoration: none;
+   } 
+    li.nav a:hover {  
+        
+       background-color:rgba(0, 201, 151);
+     }
+   
+     .header-image { 
+        width: 100%; 
+        overflow: hidden; 
+    }
+    
+    .header-image img {
+        width: 100%; 
+        height: 25%; 
+        display: block;
+    }
+
+    img.fotos{
+        margin-left: 20px;
+    } 
+    img.fotos2{
+        margin-left: 10px;
+    } 
+    p{
+        justify-content: left;
+    }
+    article.fila1{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+        font-size: 20px;
+        float:left ;
+        display: flex;
+        justify-content:baseline;
+        align-items: center;
+        gap: 20px; 
+    } 
+    article.fila2{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        float:left ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; 
+        font-size: 20px;
+      
+    } 
+    article.fila3{ 
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        float:left ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+    }
+    article.fila4{ 
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        float:left ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+    }
+aside.derecho{ 
+    float: center;  
+    width: 20%; 
+    height: auto;
+    min-width: none; 
+    padding: 10px; 
+}aside.derecho2{ 
+    float: right;  
+    width: 20%; 
+    height: auto;
+    min-width: none; 
+    padding: 10px; 
+}
+    iframe.spotify{
+       /* Iframe para el srcipt de SPOTIFY de la página dedicada a los discos */
+        border-radius: 12px; 
+        width: 300px;
+        height: 352px;
+        float: center;
+        margin: 20px 0 6px 20px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    } 
+    iframe.spotify1{
+       /* Iframe para el script de SPOTIFY de la página de inicio */
+        border-radius: 12px; 
+        width: 310px;
+        height: 1030px;
+        float: center;
+        margin: 0px 0 6px 65px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    } 
+footer.foot { 
+    clear: both;
+    height: 40px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    line-height: 50px; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+} 
+div.caja{ 
+    position:relative;
+    display: inline-block;
+}
+div.texto1{ 
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    color: black;
+} 
+p.tex{ position: absolute;
+    top: 10px;
+    left: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    color: black;}
+button.boton{ 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+} 
+div.contenedor{ 
+    float: left;
+    display: flex;
+    flex-direction: column;
+   width: 80%;
+} 
+
+div.contenedor2{ 
+    float: left;
+    display: flex;
+    flex-direction: column;
+   width: 80%; 
+   vertical-align: auto;
+}  
+p.cult2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 20px; 
+}
+h2.cult{ 
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 40px;   
+    text-align: center;
+}h2.cult1{ 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+   font-size: 30px;   
+ 
+}
+aside.timeli{  
+    max-height: 900px; 
+    overflow-y: auto;  
+    width: 300px; 
+    float: right;
+}

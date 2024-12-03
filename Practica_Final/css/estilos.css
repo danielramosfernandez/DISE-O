@@ -1,15 +1,13 @@
-*, *::before,*::after {
+*, *::before, *::after {
     box-sizing: border-box; 
     margin: 0;
     padding: 0;
-
 }
 
 h1, h3, h4, .container {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%; 
     text-align: center; 
-  
 }
 
 header {
@@ -24,6 +22,11 @@ header {
     z-index: 100;
 }
 
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 .imgHeader {
     margin-top: 175px;
     width: 100%;
@@ -36,22 +39,25 @@ li a:hover {
     background-color: #43655c;
 }
 
+/* Menú a la derecha y centrado */
 nav.der {
-   
-    display: inline-block;
-    justify-content: space-evenly;
-    padding: 10px 280px;
-}   
-
-.der .der .der{
-    display:inline-block;
-    justify-content: space-evenly; 
-
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
 }
+
+nav.der ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
 nav.der ul li {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 35px;
+    margin: 0 10px;
 }
 
 nav.der ul li a {
@@ -59,10 +65,12 @@ nav.der ul li a {
     padding: 35px;
     color: white;
     text-decoration: none;
+    border-radius: 15px;
 }
 
 li.nav a:hover {
-    background-color: rgba(0, 201, 151);
+ background-color: rgba(0, 201, 151, 0.7);
+    border-radius: 15px;
 }
 
 .header-image {
@@ -78,7 +86,7 @@ li.nav a:hover {
 
 footer.foot {
     clear: both;
-    height: 40px;
+    height: 100%;
     color: white;
     background-color: black;
     text-align: center;
@@ -91,8 +99,7 @@ footer.foot {
     grid-template-columns: auto 435px;
     grid-gap: 10px;
     grid-auto-rows: auto;
-    grid-template-areas:
-        "a b";
+    grid-template-areas: "a b";
 }
 
 .cartelOriginal {
@@ -117,39 +124,132 @@ footer.foot {
     height: 100%; 
 }
 
-.texto-principal {
+.titulos{  
+    text-align: center;
     flex: 3;
-    width:90%; 
+    width: 90%; 
+    margin-bottom: 0;
+    height: 100%;  
+}
+
+.texto-principal { 
+    text-align: justify;
+    flex: 3;
+    width: 90%; 
     margin-bottom: 0;
     height: 100%; 
 }
 
-.contenedor-flex-aside {     
-
+.contenedor-flex-aside {
     justify-content: space-between;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 20px;
 }
 
 img.fotoaside{
     border-radius: 10px;
- }
+}
+
 aside.info-adicional { 
-    flex: 0.8;  
-    
-    flex-direction:column;
+    flex: 0.8;
+    flex-direction: column;
     justify-content: space-between;
     background-color: #d3d0d0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 10%;   
+    width: 10%;
     height: 100%;
-     margin-top: 10px;
+    margin-top: 10px;
     margin-left: 10px;
     flex-grow: 1; 
-   
 }
 
+/* Estilos globales para toda la página */
+video { 
+    max-width: 100%;   
+    height: auto;     
+    display: block;
+    margin: 20px auto; /* Centrar el video y agregar espacio superior e inferior */
+} 
+
+img { 
+    max-width: 100%; 
+    height: auto;
+}
+
+/* Media Queries */
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        background-size: cover;
+        position: static;
+    }
+
+    nav.der {
+        display: none; /* Esconder el menú en pantallas pequeñas */
+    }
+
+    nav.der ul li {
+        font-size: 25px;
+    }
+
+    .imgHeader {
+        margin-top: 0;
+    }
+
+    .contenedorCartel {
+        grid-template-columns: 1fr;
+        grid-template-areas: "a" "b";
+    }
+
+    .contenido-flex {
+        flex-direction: column;
+    }
+
+    .texto-principal {
+        width: 100%; 
+    }
+
+    aside.info-adicional {
+        width: 100% !important;
+        margin: 0;
+    }
+
+    video {
+        width: 100%; /* Hacer que el video ocupe el ancho completo */
+        height: auto;
+    }
+
+    .titulos, .texto-principal, video {
+        text-align: center; /* Centrar el título y el texto debajo del video */
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    nav.der ul li {
+        font-size: 30px;
+    }
+
+    .contenido-flex {
+        gap: 20px;
+    }
+
+    aside.info-adicional {
+        width: 30%;
+    }
+
+    video {
+        width: 100%; /* Mantener el video centrado */
+        height: auto;
+    }
+
+    .titulos, .texto-principal, video {
+        text-align: center; /* Centrar el título y el texto debajo del video */
+    }
+}

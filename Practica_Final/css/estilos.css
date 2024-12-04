@@ -66,11 +66,13 @@ nav.der ul li a {
     color: white;
     text-decoration: none;
     border-radius: 15px;
+   
 }
 
 li.nav a:hover {
  background-color: rgba(0, 201, 151, 0.7);
     border-radius: 15px;
+
 }
 
 .header-image {
@@ -165,14 +167,13 @@ aside.info-adicional {
     margin-top: 10px;
     margin-left: 10px;
     flex-grow: 1; 
+    
 }
-
-/* Estilos globales para toda la página */
 video { 
     max-width: 100%;   
     height: auto;     
     display: block;
-    margin: 20px auto; /* Centrar el video y agregar espacio superior e inferior */
+    margin: 20px auto; 
 } 
 
 img { 
@@ -180,9 +181,7 @@ img {
     height: auto;
 }
 
-/* Media Queries */
-
-/* Estilos para pantallas pequeñas (móviles) */
+/* MOVILES */
 @media (max-width: 768px) {
     header {
         height: auto;
@@ -191,7 +190,7 @@ img {
     }
 
     nav.der {
-        display: none; /* Esconder el menú en pantallas pequeñas */
+        display: none; /* Display none para que desaparezca el menu cuando se pone para pantallas pequeñas */
     }
 
     nav.der ul li {
@@ -221,16 +220,16 @@ img {
     }
 
     video {
-        width: 100%; /* Hacer que el video ocupe el ancho completo */
+        width: 100%; 
         height: auto;
     }
 
     .titulos, .texto-principal, video {
-        text-align: center; /* Centrar el título y el texto debajo del video */
+        text-align: center; 
     }
 }
 
-/* Estilos para pantallas medianas (tablets) */
+/* TABLET */
 @media (max-width: 1024px) {
     nav.der ul li {
         font-size: 30px;
@@ -245,11 +244,11 @@ img {
     }
 
     video {
-        width: 100%; /* Mantener el video centrado */
+        width: 100%; 
         height: auto;
     }
 
     .titulos, .texto-principal, video {
-        text-align: center; /* Centrar el título y el texto debajo del video */
+        text-align: center; 
     }
 }

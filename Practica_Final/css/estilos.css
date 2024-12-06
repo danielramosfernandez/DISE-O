@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-h1, h3, h4, .container {
+h1,h2, h3, h4, .container {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%; 
     text-align: center; 
@@ -36,7 +36,7 @@ body {
 }
 
 li a:hover {
-    background-color: #43655c;
+    background-color: #928403;
 }
 
 /* Menú a la derecha y centrado */
@@ -70,7 +70,7 @@ nav.der ul li a {
 }
 
 li.nav a:hover {
- background-color: rgba(0, 201, 151, 0.7);
+ background-color: rgba(230, 216, 34, 0.7);
     border-radius: 15px;
 
 }
@@ -116,7 +116,37 @@ footer.foot {
     height: 100%;
     overflow: hidden;
 }
+.textoCartelOri {
+    text-align: center;
+}
+.bandas-container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between the images */
+}
 
+.banda-item {
+    width: 30%; /* Keeps the images at 30% width */
+    text-align: center; /* Centers the text under the image */
+}
+.bandas-container img {
+    width: 100%;  /* Adjusts image width to fit 3 per row */
+    height: 300px;  /* Fixed height for vertical rectangles */
+    object-fit: cover;  /* Ensures the image fills the container without distortion */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    transition: transform 0.3s ease-in-out;/* !REVISAR */
+}
+.bandas-container img:hover {
+    transform: scale(1.05); /* !REVISAR */
+}
+.banda-nombre {
+    margin-top: 10px; /* Space between the image and the text */
+    font-size: 16px;
+    color: #333; /* Text color */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .contenido-flex {
     display: flex;
     justify-content: space-between;
@@ -126,13 +156,6 @@ footer.foot {
     height: 100%; 
 }
 
-.titulos{  
-    text-align: center;
-    flex: 3;
-    width: 90%; 
-    margin-bottom: 0;
-    height: 100%;  
-}
 
 .texto-principal { 
     text-align: justify;
@@ -150,8 +173,9 @@ footer.foot {
 }
 
 img.fotoaside{
+    
     border-radius: 10px;
-}
+} 
 
 aside.info-adicional { 
     flex: 0.8;
@@ -167,7 +191,17 @@ aside.info-adicional {
     margin-top: 10px;
     margin-left: 10px;
     flex-grow: 1; 
+
     
+}
+iframe.spotify-embed {
+    border-radius: 12px; /* Bordes redondeados */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 352px; /* Altura fija */
+    border: none; /* Elimina el borde */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    display: block; /* Asegura que se comporte como un bloque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para darle un efecto flotante */
 }
 video { 
     max-width: 100%;   
@@ -180,9 +214,42 @@ img {
     max-width: 100%; 
     height: auto;
 }
+footer { 
+    background-color: black; 
+    color: #ffffff;
+    align-items: center;
+    border-top: 3px solid #928403;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    padding: 2em;
+  }
+  
+  footer img {
+    width: 50px;
+    
+  } 
+  footer img:hover{ 
+    transform: scale(1.05); /* !REVISAR */
+  }
+  .social {
+    display: flex; /* Coloca las imágenes en fila */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Alinea las imágenes verticalmente */
+    gap: 15px; /* Espacio entre las imágenes */
+}
 
-/* MOVILES */
-@media (max-width: 768px) {
+.social img {
+    width: 50px; /* Ajusta el ancho de las imágenes */
+    height: 50px; /* Asegura que todas tengan la misma altura */
+    object-fit: contain; /* Evita distorsión manteniendo la proporción */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+    display: block; /* Asegura el espaciado correcto */
+}
+
+
+/* MÓVILES PEQUEÑOS (<576px) */
+@media (max-width: 576px) {
     header {
         height: auto;
         background-size: cover;
@@ -190,11 +257,7 @@ img {
     }
 
     nav.der {
-        display: none; /* Display none para que desaparezca el menu cuando se pone para pantallas pequeñas */
-    }
-
-    nav.der ul li {
-        font-size: 25px;
+        display: none; /* Elimina el menú en pantallas muy pequeñas */
     }
 
     .imgHeader {
@@ -208,47 +271,119 @@ img {
 
     .contenido-flex {
         flex-direction: column;
+        gap: 15px;
     }
 
     .texto-principal {
-        width: 100%; 
+        width: 100%;
+        text-align: justify;
+        font-size: 14px; /* Texto más pequeño */
     }
 
     aside.info-adicional {
         width: 100% !important;
         margin: 0;
+        font-size: 14px; /* Texto más pequeño */
+        padding: 10px;
+    }
+    .bandas-container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra las imágenes */
+        gap: 15px; /* Espacio entre las imágenes */
+    }
+  
+    .banda-item {
+        width: 90%; /* Cada imagen ocupa casi todo el ancho */
     }
 
-    video {
-        width: 100%; 
-        height: auto;
+    .bandas-container img {
+        height: auto; /* Mantiene la proporción de la imagen */
+        object-fit: contain; /* Evita que se recorte o distorsione */
+    }
+    iframe.spotify-embed {
+        height: 300px; /* Ajusta la altura del iframe */
     }
 
-    .titulos, .texto-principal, video {
-        text-align: center; 
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    footer img {
+        width: 40px; /* Imágenes más pequeñas en el footer */
+    }
+
+    .social img {
+        width: 40px;
+        height: 40px;
     }
 }
 
-/* TABLET */
-@media (max-width: 1024px) {
-    nav.der ul li {
-        font-size: 30px;
+/* TABLET PEQUEÑAS (<992px) */
+@media (max-width: 992px) {
+    header {
+        height: auto;
+        background-size: cover;
+        position: static;
+    }
+
+    nav.der {
+        display: none; /* Oculta el menú en tabletas pequeñas */
+    }
+
+    .contenedorCartel {
+        grid-template-columns: 1fr;
+        grid-template-areas: "a" "b";
     }
 
     .contenido-flex {
+        flex-direction: column;
         gap: 20px;
     }
 
+    .texto-principal {
+        width: 100%;
+        font-size: 16px; /* Texto ajustado para tabletas */
+    }
+
     aside.info-adicional {
-        width: 30%;
+        width: 100% !important;
+        margin: 0;
+        padding: 15px;
     }
 
-    video {
-        width: 100%; 
-        height: auto;
+      .bandas-container {
+        flex-direction: column; /* También una debajo de otra */
+        align-items: center;
+        gap: 20px;
     }
 
-    .titulos, .texto-principal, video {
-        text-align: center; 
+    img.banda-item {
+        width: 80%; /* Las imágenes son más grandes en tabletas */ 
+        
+    } 
+   
+    .bandas-container img {
+        height: auto; /* Mantiene la proporción de la imagen */
+        object-fit: contain;
+    }
+    iframe.spotify-embed {
+        height: 320px; /* Ajusta la altura del iframe */
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    footer img {
+        width: 45px; /* Imágenes en footer ajustadas */
+    }
+
+    .social img {
+        width: 45px;
+        height: 45px;
     }
 }
